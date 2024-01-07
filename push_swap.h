@@ -6,13 +6,14 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 16:15:36 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/07 16:59:20 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <limits.h>
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
@@ -29,6 +30,9 @@ typedef struct s_snode
 /* STACK_UTILS */
 
 t_snode	*find_last(t_snode *stack);
+t_snode	*min_node(t_snode *stack);
+t_snode	*max_node(t_snode *stack);
 int		stack_length(t_snode *stack);
+int		sorted_stack(t_snode *stack);
 
 #endif

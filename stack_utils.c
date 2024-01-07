@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 16:06:44 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 16:15:39 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/07 16:55:29 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,55 @@ int	stack_length(t_snode *stack)
 	return (len);
 }
 
+int	sorted_stack(t_snode *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->data > stack->next->data)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
 
+t_snode	*min_node(t_snode *stack)
+{
+	long	min;
+	t_snode	*min_node;
+
+	if (!stack)
+		return (NULL);
+	min = LONG_MAX;
+	while (stack->next)
+	{
+		if (stack->data < min)
+		{
+			min = stack->data;
+			min_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (min_node);
+}
+
+t_snode	*max_node(t_snode *stack)
+{
+	long	max;
+	t_snode	*max_node;
+
+	if (!stack)
+		return (NULL);
+	max = LONG_MIN;
+	while (stack->next)
+	{
+		if (stack->data > max)
+		{
+			max = stack->data;
+			max_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (max_node);
+}
