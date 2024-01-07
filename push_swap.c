@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 14:47:24 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/07 15:01:32 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int	main(int ac, char **av)
 		av = ft_split(av[1], ' ');
 	else
 		av++;
+	ft_printf("%s", av[0]);
 	return (0);
 }
