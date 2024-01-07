@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_stack_a.c                                     :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 15:56:19 by yufonten         ###   ########.fr       */
+/*   Created: 2024/01/07 16:06:44 by yufonten          #+#    #+#             */
+/*   Updated: 2024/01/07 16:15:39 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static long	ft_atol(const char *str)
+t_snode	*find_last(t_snode *stack)
 {
-	int		i;
-	int		sign;
-	long	n;
+	if (!stack)
+		return (NULL);
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
+}
 
-	i = 0;
-	sign = 1;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	while (str[i] == 43 || str[i] == 45)
+int	stack_length(t_snode *stack)
+{
+	int	len;
+
+	if (!stack)
+		return (0);
+	len = 0;
+	while (stack)
 	{
-		if (str[i] == 45)
-			sign *= -1;
-		i++;
+		len++;
+		stack = stack->next;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		n = (n * 10) + (str[i] - 48);
-		i++;
-	}
-	return (n * sign);
+	return (len);
 }
 
 
