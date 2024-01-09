@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 16:59:20 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:27:42 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,10 @@ t_snode	*min_node(t_snode *stack);
 t_snode	*max_node(t_snode *stack);
 int		stack_length(t_snode *stack);
 int		sorted_stack(t_snode *stack);
+
+/* Stack operations */
+
+void	sa(t_snode **stack_a);
+void	sb(t_snode **stack_b);
 
 #endif

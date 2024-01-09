@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_stack_a.c                                     :+:      :+:    :+:   */
+/*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/07 16:06:12 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/09 18:01:29 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static long	ft_atol(const char *str)
 static void	ft_append_node(t_snode **stack, int n)
 {
 	t_snode	*node;
-	t_snode	*lats_node;
+	t_snode	*last_node;
 
 	if (!stack)
 		return (NULL);
