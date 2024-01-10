@@ -17,13 +17,13 @@ int	main(void)
 	a1.next = &a2;
 	a2.next = NULL;
 
-	/*Stack b = 1 2 3 */
+	/*Stack b = 2 1 3 */
 	t_snode b0;
 	t_snode b1;
 	t_snode b2;
 	t_snode *stack_b;
 	stack_b = &b0;
-	b0.data = 2;
+	b0.data = 2;i
 	b0.next = &b1;
 	b0.prev = NULL;
 	b1.data = 1;
