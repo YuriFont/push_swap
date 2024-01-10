@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:05:35 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/10 15:59:09 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:09:10 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ static void	push(t_snode **receive, t_snode **loss)
 	if (!*loss)
 		return ;
 	node_push = *loss;
-	*loss = (*loss)->next;,
+	*loss = (*loss)->next;
 	if (*loss)
 		(*loss)->prev = NULL;
 	node_push->prev = NULL;
 	if (*receive)
 	{
 		node_push->next = *receive;
-		*receive->prev = node_push;
+		(*receive)->prev = node_push;
 		*receive = node_push;
 	}
 	else

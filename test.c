@@ -48,7 +48,7 @@ int	main(void)
 	printf("Stack_b: %d", stack_b->data);
 	printf(" %d", stack_b->next->data);
 	printf(" %d\n", stack_b->next->next->data);
-	sa(&stack_b);
+	sb(&stack_b);
 	printf("Stack_b: %d", stack_b->data);
 	printf(" %d", stack_b->next->data);
 	printf(" %d\n\n\n", stack_b->next->next->data);
@@ -67,5 +67,38 @@ int	main(void)
 	printf(" %d\n", stack_a->next->next->data);
 	printf("Stack_b: %d", stack_b->data);
 	printf(" %d", stack_b->next->data);
+	printf(" %d\n\n\n", stack_b->next->next->data);
+
+	/* Teste - pa */
+	printf("Teste - pa\n");
+	printf("Stack_a: %d", stack_a->data);
+	printf(" %d", stack_a->next->data);
+	printf(" %d\n", stack_a->next->next->data);
+	printf("Stack_b: %d", stack_b->data);
+	printf(" %d", stack_b->next->data);
 	printf(" %d\n", stack_b->next->next->data);
+	pa(&stack_a, &stack_b);
+	printf("Stack_a: %d", stack_a->data);
+	printf(" %d", stack_a->next->data);
+	printf(" %d", stack_a->next->next->data);
+	printf(" %d\n", stack_a->next->next->next->data);
+	printf("Stack_b: %d", stack_b->data);
+	printf(" %d\n\n\n", stack_b->next->data);
+
+	/* Teste - pb */
+	printf("Teste - pb\n");
+	printf("Stack_a: %d", stack_a->data);
+	printf(" %d", stack_a->next->data);
+	printf(" %d", stack_a->next->next->data);
+	printf(" %d\n", stack_a->next->next->next->data);
+	printf("Stack_b: %d", stack_b->data);
+	printf(" %d\n", stack_b->next->data);
+	pb(&stack_b, &stack_a);
+	printf("Stack_a: %d", stack_a->data);
+	printf(" %d", stack_a->next->data);
+	printf(" %d\n", stack_a->next->next->data);
+	printf("Stack_b: %d", stack_b->data);
+	printf(" %d", stack_b->next->data);
+	printf(" %d\n\n\n", stack_b->next->next->data);
+	return (0);
 }
