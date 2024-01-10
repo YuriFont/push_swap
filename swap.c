@@ -6,13 +6,13 @@
 /*   By: yufonten <yufonten@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:13:16 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/09 15:41:15 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:03:23 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_snode **head)
+static void	swap(t_snode **head)
 {
 	int	len;
 
@@ -38,4 +38,11 @@ void	sb(t_snode **stack_b)
 {
 	swap(stack_b);
 	write(1, "sb\n", 3);
+}
+
+void	ss(t_snode **stack_a, t_snode **stack_b)
+{
+	swap(stack_a);
+	swap(stack_b);
+	write(1, "ss\n", 3);
 }

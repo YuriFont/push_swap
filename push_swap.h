@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/09 15:27:42 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/10 15:58:06 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ int		sorted_stack(t_snode *stack);
 
 void	sa(t_snode **stack_a);
 void	sb(t_snode **stack_b);
+void	ss(t_snode **stack_a, t_snode **stack_b);
+void	pa(t_snode **stack_a, t_snode **stack_b);
+void	pb(t_snode **stack_b, t_snode **stack_a);
 
 #endif
