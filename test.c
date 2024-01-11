@@ -23,7 +23,7 @@ int	main(void)
 	t_snode b2;
 	t_snode *stack_b;
 	stack_b = &b0;
-	b0.data = 2;i
+	b0.data = 2;
 	b0.next = &b1;
 	b0.prev = NULL;
 	b1.data = 1;
