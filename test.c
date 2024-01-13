@@ -34,7 +34,7 @@ int	main(void)
 	b2.prev = &b1;
 
 	/* Teste - sa */
-	printf("Teste - sa\n");
+	printf("Teste - sa\n\n");
 	printf("Stack_a: %d", stack_a->data);
 	printf(" %d", stack_a->next->data);
 	printf(" %d\n", stack_a->next->next->data);
@@ -44,7 +44,7 @@ int	main(void)
 	printf(" %d\n\n\n", stack_a->next->next->data);
 
 	/* Teste - sb */
-	printf("Teste - sb\n");
+	printf("Teste - sb\n\n");
 	printf("Stack_b: %d", stack_b->data);
 	printf(" %d", stack_b->next->data);
 	printf(" %d\n", stack_b->next->next->data);
@@ -54,7 +54,7 @@ int	main(void)
 	printf(" %d\n\n\n", stack_b->next->next->data);
 	
 	/* Teste - ss */
-	printf("Teste - ss\n");
+	printf("Teste - ss\n\n");
 	printf("Stack_a: %d", stack_a->data);
 	printf(" %d", stack_a->next->data);
 	printf(" %d\n", stack_a->next->next->data);
@@ -70,7 +70,7 @@ int	main(void)
 	printf(" %d\n\n\n", stack_b->next->next->data);
 
 	/* Teste - pa */
-	printf("Teste - pa\n");
+	printf("Teste - pa\n\n");
 	printf("Stack_a: %d", stack_a->data);
 	printf(" %d", stack_a->next->data);
 	printf(" %d\n", stack_a->next->next->data);
@@ -86,7 +86,7 @@ int	main(void)
 	printf(" %d\n\n\n", stack_b->next->data);
 
 	/* Teste - pb */
-	printf("Teste - pb\n");
+	printf("Teste - pb\n\n");
 	printf("Stack_a: %d", stack_a->data);
 	printf(" %d", stack_a->next->data);
 	printf(" %d", stack_a->next->next->data);
@@ -102,19 +102,19 @@ int	main(void)
 	printf(" %d\n\n\n", stack_b->next->next->data);
 
 	/* Teste - ra */
-	printf("Teste - ra\n");
+	printf("Teste - ra\n\n");
 	printf("Stack_a: %d %d %d\n", stack_a->data, stack_a->next->data, stack_a->next->next->data);
 	ra(&stack_a);
 	printf("Stack_a: %d %d %d\n\n\n", stack_a->data, stack_a->next->data, stack_a->next->next->data);
 
 	/* Teste - rb */
-	printf("Teste - rb\n");
+	printf("Teste - rb\n\n");
 	printf("Stack_b: %d %d %d\n", stack_b->data, stack_b->next->data, stack_b->next->next->data);
 	rb(&stack_b);
 	printf("Stack_b: %d %d %d\n\n\n", stack_b->data, stack_b->next->data, stack_b->next->next->data);
 
 	/* Teste - rr */
-	printf("Teste - rr\n");
+	printf("Teste - rr\n\n");
 	printf("Stack_a: %d %d %d\n", stack_a->data, stack_a->next->data, stack_a->next->next->data);
 	printf("Stack_b: %d %d %d\n", stack_b->data, stack_b->next->data, stack_b->next->next->data);
 	rr(&stack_a, &stack_b);
