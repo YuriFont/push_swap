@@ -6,13 +6,13 @@
 /*   By: yufonten <yufonten@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:05:35 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/10 16:09:10 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/13 17:22:34 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	push(t_snode **receive, t_snode **loss)
+void	push(t_snode **receive, t_snode **loss)
 {
 	t_snode	*node_push;
 

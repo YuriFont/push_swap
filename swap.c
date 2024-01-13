@@ -6,13 +6,13 @@
 /*   By: yufonten <yufonten@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 14:13:16 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/10 16:25:16 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/13 17:21:15 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	swap(t_snode **head)
+void	swap(t_snode **head)
 {
 	int	len;
 
