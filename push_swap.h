@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/13 17:46:01 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/13 23:08:57 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,19 @@ void	swap(t_snode **head);
 void	sa(t_snode **stack_a);
 void	sb(t_snode **stack_b);
 void	ss(t_snode **stack_a, t_snode **stack_b);
+
 void	push(t_snode **receive, t_snode **loss);
 void	pa(t_snode **stack_a, t_snode **stack_b);
 void	pb(t_snode **stack_b, t_snode **stack_a);
+
 void	rotate(t_snode **head);
 void	ra(t_snode **stack_a);
 void	rb(t_snode **stack_b);
 void	rr(t_snode **stack_a, t_snode **stack_b);
+
+void	reverse_rotate(t_snode **head);
+void	rra(t_snode **stack_a);
+void	rrb(t_snode **stack_b);
+void	rrr(t_snode **stack_a, t_snode **stack_b);
 
 #endif
