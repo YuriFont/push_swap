@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 22:55:56 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/13 23:09:00 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/13 23:19:17 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	reverse_rotate(t_snode **head)
 	t_snode	*last_node;
 
 	len = stack_length(*head);
-	if (!stack || !(*stack) || len == 1)
+	if (!head || !(*head) || len == 1)
 		return ;
 	last_node = find_last(*head);
 	last_node->next = *head;
