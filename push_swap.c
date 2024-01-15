@@ -6,12 +6,11 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 16:06:54 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:40:49 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 int	main(int ac, char **av)
 {
 	t_snode	*a;

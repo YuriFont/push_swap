@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 15:57:45 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:45:46 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	init_stack(t_snode **stack_a, char **av)
 	long	n;
 
 	i = 0;
-	while (av[i])
+	while (av[i] != NULL)
 	{
 		n = ft_atol(av[i]);
 		if (n < INT_MIN || n > INT_MAX)
