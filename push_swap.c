@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 15:46:26 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:06:54 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ int	main(int ac, char **av)
 	if (ac == 1 || (ac == 2 && !av[1][0]))
 		return (1);
 	else if (ac == 2)
-		av = ft_split(av[1], ' ');
-	else
-		av++;
-	init_stack(&a, av);
+		av = ft_split(av[0], ' ');
+	init_stack(&a, av + 1);
 	if (!sorted_stack(a))
 	{
 		if (stack_length(a) == 2)
