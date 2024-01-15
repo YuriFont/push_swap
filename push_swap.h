@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/13 23:08:57 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:45:41 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ typedef struct s_snode
 /* STACK_UTILS */
 
 t_snode	*find_last(t_snode *stack);
-t_snode	*min_node(t_snode *stack);
-t_snode	*max_node(t_snode *stack);
+t_snode	*find_min_node(t_snode *stack);
+t_snode	*find_max_node(t_snode *stack);
 int		stack_length(t_snode *stack);
 int		sorted_stack(t_snode *stack);
+void	init_stack(t_snode **stack_a, char **av);
 
 /* Stack operations */
 
@@ -52,5 +53,8 @@ void	reverse_rotate(t_snode **head);
 void	rra(t_snode **stack_a);
 void	rrb(t_snode **stack_b);
 void	rrr(t_snode **stack_a, t_snode **stack_b);
+
+/* A S */
+void	sorted_three(t_snode **stack_a);
 
 #endif

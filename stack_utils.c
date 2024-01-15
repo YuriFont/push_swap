@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 16:06:44 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/09 15:25:38 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:45:43 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	sorted_stack(t_snode *stack)
 	return (1);
 }
 
-t_snode	*min_node(t_snode *stack)
+t_snode	*find_min_node(t_snode *stack)
 {
 	long	min;
 	t_snode	*min_node;
@@ -69,7 +69,7 @@ t_snode	*min_node(t_snode *stack)
 	return (min_node);
 }
 
-t_snode	*max_node(t_snode *stack)
+t_snode	*find_max_node(t_snode *stack)
 {
 	long	max;
 	t_snode	*max_node;
