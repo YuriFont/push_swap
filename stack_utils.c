@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 16:06:44 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 19:55:36 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:05:17 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_snode	*find_last(t_snode *stack)
 {
 	if (stack == NULL)
 		return (NULL);
-	while (stack->next != NULL)
+	while (stack->next)
 		stack = stack->next;
 	return (stack);
 }
