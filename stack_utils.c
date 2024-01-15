@@ -6,85 +6,85 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 16:06:44 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 20:05:17 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:25:05 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_snode	*find_last(t_snode *stack)
+t_snode	*find_last(t_snode *head)
 {
-	if (stack == NULL)
+	if (head == NULL)
 		return (NULL);
-	while (stack->next)
-		stack = stack->next;
-	return (stack);
+	while (head->next)
+		head = head->next;
+	return (head);
 }
 
-int	stack_length(t_snode *stack)
+int	stack_length(t_snode *head)
 {
 	int	len;
 
-	if (!stack)
+	if (!head)
 		return (0);
 	len = 0;
-	while (stack)
+	while (head)
 	{
 		len++;
-		stack = stack->next;
+		head = head->next;
 	}
 	return (len);
 }
 
-int	sorted_stack(t_snode *stack)
+int	sorted_stack(t_snode *head)
 {
-	if (!stack)
+	if (!head)
 		return (1);
-	while (stack->next)
+	while (head->next)
 	{
-		if (stack->data > stack->next->data)
+		if (head->data > head->next->data)
 			return (0);
-		stack = stack->next;
+		head = head->next;
 	}
 	return (1);
 }
 
-t_snode	*find_min_node(t_snode *stack)
+t_snode	*find_min_node(t_snode *head)
 {
 	long	min;
 	t_snode	*min_node;
 
-	if (!stack)
+	if (!head)
 		return (NULL);
 	min = LONG_MAX;
-	while (stack->next)
+	while (head->next)
 	{
-		if (stack->data < min)
+		if (head->data < min)
 		{
-			min = stack->data;
-			min_node = stack;
+			min = head->data;
+			min_node = head;
 		}
-		stack = stack->next;
+		head = head->next;
 	}
 	return (min_node);
 }
 
-t_snode	*find_max_node(t_snode *stack)
+t_snode	*find_max_node(t_snode *head)
 {
 	long	max;
 	t_snode	*max_node;
 
-	if (!stack)
+	if (!head)
 		return (NULL);
 	max = LONG_MIN;
-	while (stack->next)
+	while (head->next)
 	{
-		if (stack->data > max)
+		if (head->data > max)
 		{
-			max = stack->data;
-			max_node = stack;
+			max = head->data;
+			max_node = head;
 		}
-		stack = stack->next;
+		head = head->next;
 	}
 	return (max_node);
 }
