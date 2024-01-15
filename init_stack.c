@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 20:05:13 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:07:48 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static long	ft_atol(const char *str)
 	}
 	else if (str[i] == 43)
 		i++;
-	
 	while (ft_isdigit(str[i]))
 	{
 		n = (n * 10) + (str[i] - 48);
