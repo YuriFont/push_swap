@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/09 18:01:29 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:13:07 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,21 @@ static void	ft_append_node(t_snode **stack, int n)
 		last_node = ft_find_last(*stack);
 		last_node->next = node;
 		node->prev = last_node;
+	}
+}
+
+void	init_stack(t_snode **stack_a, char **av)
+{
+	int	i;
+	int	n;
+
+	i = 0;
+	while (av[i] != '\0')
+	{
+		n = ft_atol(av[i]);
+		if (n < INT_MIN || n > INT_MAX)
+			break ;
+		ft_append_node(*a, (int)n);
+		i++;
 	}
 }
