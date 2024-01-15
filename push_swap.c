@@ -6,16 +6,19 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 16:40:49 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:49:58 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 int	main(int ac, char **av)
 {
 	t_snode	*a;
 	t_snode	*b;
 
+	a = NULL;
+	b = NULL;
 	(void)b;
 	if (ac == 1 || (ac == 2 && !av[1][0]))
 		return (1);
@@ -28,9 +31,8 @@ int	main(int ac, char **av)
 			sa(&a);
 		else if (stack_length(a) == 3)
 			sorted_three(&a);
-		/*else
-			sort_stack(&a);*/
 	}
-	/*free_stack(&a);*/
+	printf("1\n");
+	printf("%d", a->data);
 	return (0);
 }

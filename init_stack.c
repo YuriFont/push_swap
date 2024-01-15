@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/15 20:07:48 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/15 20:46:17 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void	append_node(t_snode **stack, int n)
 		return ;
 	node->next = NULL;
 	node->data = n;
-	if (!(*stack))
+	if (*stack == NULL)
 	{
 		*stack = node;
 		node->prev = NULL;
