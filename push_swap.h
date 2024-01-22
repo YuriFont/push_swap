@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/22 17:05:29 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:40:29 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ t_snode	*find_min_node(t_snode *head);
 t_snode	*find_max_node(t_snode *head);
 int		stack_length(t_snode *head);
 int		sorted_stack(t_snode *head);
-void	init_stack(t_snode **stack_a, char **av);
+void	init_stack(t_snode **stack_a, char **av, bool argc_2);
 long	ft_atol(const char *str);
 
 /* Stack operations */
