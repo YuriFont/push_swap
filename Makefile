@@ -6,7 +6,7 @@
 #    By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:31:42 by yufonten          #+#    #+#              #
-#    Updated: 2024/01/23 16:36:29 by yufonten         ###   ########.fr        #
+#    Updated: 2024/01/23 18:34:30 by yufonten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,6 @@ fclean: clean
 		@$(MAKE) fclean -C ./libft/
 		@$(RM) $(LIBFT) $(NAME)
 
-re: fclean all.
+re: fclean all
 
 .PHONY:	all clean fclean re
