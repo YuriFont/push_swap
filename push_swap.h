@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 14:26:25 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:14:33 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ typedef struct s_snode
 }	t_snode;
 
 /* STACK_UTILS */
-
 t_snode	*find_last(t_snode *head);
 t_snode	*find_min_node(t_snode *head);
 t_snode	*find_max_node(t_snode *head);
@@ -37,7 +36,6 @@ void	init_stack(t_snode **stack_a, char **av, bool argc_2);
 long	ft_atol(const char *str);
 
 /* Stack operations */
-
 void	swap(t_snode **head);
 void	sa(t_snode **stack_a);
 void	sb(t_snode **stack_b);
@@ -58,18 +56,15 @@ void	rrb(t_snode **stack_b);
 void	rrr(t_snode **stack_a, t_snode **stack_b);
 
 /* Check Args */
-
 bool	parameter_error(char *str);
 bool	repeated_number(t_snode *head, int nbr);
 
 /* Error Situation */
-
 void	free_stack(t_snode **head);
 void	free_matrix(char **av);
 void	error_free(t_snode **head, char **av, bool argc_2);
 
 /* Sorting Algorithms */
-
 void	sorted_three(t_snode **stack_a);
 void	sorted_algorithm(t_snode **stack_a, t_snode **stack_b);
 
