@@ -6,11 +6,18 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 17:16:58 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 18:32:09 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	final_free(t_snode **stack_a, char **av, bool argc_2)
+{
+	free_stack(stack_a);
+	if (argc_2)
+		free_matrix(av);
+}
 
 int	main(int ac, char **av)
 {
