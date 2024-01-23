@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 17:11:08 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:16:58 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	main(int ac, char **av)
 		else
 			sorted_algorithm(&a, &b);
 	}
-	free_stack(&a);
+	final_free(&a, av, ac == 2);
 	return (0);
 }

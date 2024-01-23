@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:05:39 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 14:28:58 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:22:48 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	free_stack(t_snode **head)
 		free(release);
 		release = tmp;
 	}
+	tmp = NULL;
+	release = NULL;
 	*head = NULL;
 }
 
@@ -51,4 +53,11 @@ void	error_free(t_snode **head, char **av, bool argc_2)
 		free_matrix(av);
 	write(2, "Error\n", 6);
 	exit(1);
+}
+
+void	final_free(t_snode **stack_a, char **av, bool argc_2)
+{
+	free_stack(stack_a);
+	if (argc_2)
+		free_matrix(av);
 }
