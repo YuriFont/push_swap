@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 02:38:51 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 02:41:24 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ bool	repeated_number(t_snode *head, int nbr);
 
 void	free_stack(t_snode **head);
 void	free_matrix(char **av);
+void	error_free(t_snode **head, char **av, bool argc_2);
 
 /* Sorting Algorithms */
 
