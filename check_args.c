@@ -6,40 +6,38 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 17:04:37 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/22 18:00:38 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 02:35:24 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_stack(t_snode **head)
-{
-	t_snode	*tmp;
-	t_snode	*release;
-
-	if (!head == NULL)
-		return ;
-	release = *head;
-	while (release)
-	{
-		tmp = release->next;
-		free(release);
-		release = tmp;
-	}
-	*head = NULL;
-}
-
-void	free_matrix(char **av)
+bool	parameter_error(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (av == NULL || *av == NULL)
-		return ;
-	while (av[i])
+	if (str[i] != '+' && str[i] != '-' && !(str[i] >= '0' && str[i] <= '9'))
+		return (true);
+	if ((str[i] == '+' || str[i] == '-') && !(str[1] >= '0' && str[1] <= '9'))
+		return (true);
+	while (str[++i] != '\0')
 	{
-		free(av[i]);
-		i++;
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (true);
 	}
-	free(av);
+	return (false);
+}
+
+bool	repeated_number(t_snode *head, int nbr)
+{
+	if (head == NULL)
+		return (false);
+	while (head)
+	{
+		if (head->data == nbr)
+			return (true);
+		head = head->next;
+	}
+	return (false);
 }

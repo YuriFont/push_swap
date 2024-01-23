@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 14:32:24 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/22 17:58:59 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 02:36:56 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,15 @@ void	rra(t_snode **stack_a);
 void	rrb(t_snode **stack_b);
 void	rrr(t_snode **stack_a, t_snode **stack_b);
 
-/* A S */
-void	sorted_three(t_snode **stack_a);
+/* Check Args */
+bool	parameter_error(char *str);
+bool	repeated_number(t_snode *head, int nbr);
 
 /* Error Situation */
 void	free_stack(t_snode **head);
 void	free_matrix(char **av);
+
+/* A S */
+void	sorted_three(t_snode **stack_a);
 
 #endif
