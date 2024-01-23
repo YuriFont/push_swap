@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 02:05:39 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 02:36:35 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:28:58 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	free_stack(t_snode **head)
 	t_snode	*tmp;
 	t_snode	*release;
 
-	if (!head == NULL)
+	if (head == NULL)
 		return ;
 	release = *head;
 	while (release)

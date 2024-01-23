@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 15:49:20 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 02:43:35 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 15:13:32 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	init_stack(t_snode **stack_a, char **av, bool argc_2)
 		n = ft_atol(av[i]);
 		if (n < INT_MIN || n > INT_MAX)
 			error_free(stack_a, av, argc_2);
-		if (repeated_number(stack_a, (int)n))
+		if (repeated_number(*stack_a, (int)n))
 			error_free(stack_a, av, argc_2);
 		append_node(stack_a, (int)n);
 		i++;
