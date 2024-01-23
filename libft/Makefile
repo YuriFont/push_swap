@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yufonten <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 16:16:17 by yufonten          #+#    #+#              #
-#    Updated: 2023/10/30 12:03:25 by yufonten         ###   ########.fr        #
+#    Updated: 2024/01/23 16:39:09 by yufonten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,11 +70,11 @@ NAME = libft.a
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-		ar rcs $(NAME) $(OBJS)
+		@ar rcs $(NAME) $(OBJS)
 clean:
-		$(RM) $(OBJS) $(BONUS_OBJS)
+		@$(RM) $(OBJS) $(BONUS_OBJS)
 fclean: clean
-		$(RM) $(NAME)
+		@$(RM) $(NAME)
 re: fclean all
 
 bonus: $(OBJS) $(BONUS_OBJS)

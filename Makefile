@@ -6,7 +6,7 @@
 #    By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:31:42 by yufonten          #+#    #+#              #
-#    Updated: 2024/01/23 16:18:16 by yufonten         ###   ########.fr        #
+#    Updated: 2024/01/23 16:36:29 by yufonten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC_FILES = push_swap.c\
 			stack_utils.c\
 			sorted_three.c\
 			sorted_algorithm.c\
+			
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
