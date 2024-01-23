@@ -6,13 +6,13 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 14:16:11 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/23 15:23:03 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:12:09 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sorted_algorithm(t_snode **stack_a, t_snode **stack_b)
+void	sorted_algorithm(t_snode **stack_a, t_snode **stack_b)
 {
 	t_snode	*min;
 	t_snode	*tmp;
