@@ -84,3 +84,37 @@ void	init_stack(t_snode **stack_a, char **av, bool argc_2)
 		i++;
 	}
 }
+
+t_snode	*get_cheapest(t_snode *head)
+{
+	if (!head)
+		return (NULL);
+	while (head)
+	{
+		if (head->cheapest)
+			return (head);
+		head = head->next;
+	}
+	return (NULL);
+}
+
+void	prep_for_push(t_snode **head, t_snode *cheapest_node, char name_stack)
+{
+	while (*head != cheapest_node)
+	{
+		if (name_stack == 'a')
+		{
+			if (cheapest_node->above_median)
+				ra(head);
+			else
+				rra(head);
+		}
+		else if (name_stack == 'b')
+		{
+			if (cheapest_node->above_median)
+				rb(head);
+			else
+				rrb(head);
+		}
+	}
+}

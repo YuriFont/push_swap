@@ -26,7 +26,7 @@ typedef struct s_snode
 	int				push_cost;
 	bool			above_median;
 	bool			cheapest;
-	struct s_snode	*target;
+	struct s_snode	*target_node;
 	struct s_snode	*next;
 	struct s_snode	*prev;
 }	t_snode;
@@ -35,10 +35,14 @@ typedef struct s_snode
 t_snode	*find_last(t_snode *head);
 t_snode	*find_min_node(t_snode *head);
 t_snode	*find_max_node(t_snode *head);
+t_snode	*get_cheapest(t_snode *stack);
 int		stack_length(t_snode *head);
 int		sorted_stack(t_snode *head);
 void	init_stack(t_snode **stack_a, char **av, bool argc_2);
 long	ft_atol(const char *str);
+void	rotate_both(t_snode **a, t_snode **b, t_snode *cheapest_node);
+void	rev_rotate_both(t_snode **a, t_snode **b, t_snode *cheapest_node);
+void	prep_for_push(t_snode **head, t_snode *cheapest_node, char name_stack);
 
 /* Stack operations */
 void	swap(t_snode **head);
@@ -69,8 +73,11 @@ void	free_stack(t_snode **head);
 void	free_matrix(char **av);
 void	error_free(t_snode **head, char **av, bool argc_2);
 
-/* Utils to sort */
+/* Init Nodes */
 void	current_index(t_snode *head);
+void	set_cheapest(t_snode *head);
+void	init_nodes_a(t_snode *stack_a, t_snode *stack_b);
+void	init_nodes_b(t_snode *stack_a, t_snode *stack_b);
 
 /* Sorting Algorithms */
 void	sorted_three(t_snode **stack_a);

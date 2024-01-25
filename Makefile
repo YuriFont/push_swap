@@ -23,6 +23,8 @@ SRC_FILES = push_swap.c\
 			stack_utils.c\
 			sorted_three.c\
 			sorted_algorithm.c\
+			init_nodes_a.c\
+			init_nodes_b.c\
 			
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.c"
+#include "push_swap.h"
 
 void	current_index(t_snode *head)
 {
 	int	i;
 	int	median;
 
-	if (!stack)
+	if (!head)
 		return ;
 	median = stack_length(head) / 2;
 	i = 0;
@@ -25,9 +25,9 @@ void	current_index(t_snode *head)
 	{
 		head->index = i;
 		if (i <= median)
-			head->above = true;
+			head->above_median = true;
 		else
-			head->above = false;
+			head->above_median = false;
 		head = head->next;
 		i++;
 	}
@@ -45,7 +45,8 @@ static void	set_target_a(t_snode *stack_a, t_snode *stack_b)
 		current_b = stack_b;
 		while (current_b)
 		{
-			if (current_b->data < stack_a->data && current_b->data > best_match_index)
+			if (current_b->data < stack_a->data
+				&& current_b->data > best_match_index)
 			{
 				best_match_index = current_b->data;
 				target_node = current_b;
@@ -58,4 +59,53 @@ static void	set_target_a(t_snode *stack_a, t_snode *stack_b)
 			stack_a->target_node = target_node;
 		stack_a = stack_a->next;
 	}
+}
+
+static void	push_cost_a(t_snode *stack_a, t_snode *stack_b)
+{
+	int	len_a;
+	int	len_b;
+
+	len_a = stack_length(stack_a);
+	len_b = stack_length(stack_b);
+	while (stack_a)
+	{
+		stack_a->push_cost = stack_a->index;
+		if (!(stack_a->above_median))
+			stack_a->push_cost = len_a - (stack_a->index);
+		if (stack_a->target_node->above_median)
+			stack_a->push_cost += stack_a->target_node->index;
+		else
+			stack_a->push_cost += len_b - (stack_a->target_node->index);
+		stack_a = stack_a->next;
+	}
+}
+
+void	set_cheapest(t_snode *head)
+{
+	t_snode	*cheapest;
+	long	most_cheapest;
+
+	if (!head)
+		return ;
+	most_cheapest = LONG_MAX;
+	while (head)
+	{
+		if (head->push_cost < most_cheapest)
+		{
+			cheapest = head;
+			most_cheapest = head->push_cost;
+		}
+		head = head->next;
+	}
+	cheapest->cheapest = true;
+}
+
+void	init_nodes_a(t_snode *stack_a, t_snode *stack_b)
+{
+	current_index(stack_a);
+	current_index(stack_b);
+	set_target_a(stack_a, stack_b);
+	push_cost_a(stack_a, stack_b);
+	set_cheapest(stack_a);
 }

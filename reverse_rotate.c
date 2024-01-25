@@ -46,3 +46,11 @@ void	rrr(t_snode **stack_a, t_snode **stack_b)
 	reverse_rotate(stack_b);
 	write(1, "rrr\n", 4);
 }
+
+void	rev_rotate_both(t_snode **a, t_snode **b, t_snode *cheapest_node)
+{
+	while (*a != cheapest_node && *b != cheapest_node->target_node)
+		rrr(a, b);
+	current_index(*a);
+	current_index(*b);
+}
