@@ -23,6 +23,10 @@ typedef struct s_snode
 {
 	int				data;
 	int				index;
+	int				push_cost;
+	bool			above_median;
+	bool			cheapest;
+	struct s_snode	*target;
 	struct s_snode	*next;
 	struct s_snode	*prev;
 }	t_snode;

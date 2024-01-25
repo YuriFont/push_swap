@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	final_free(t_snode **stack_a, char **av, bool argc_2)
+static void	final_free(t_snode **stack_a, char **av, bool argc_2)
 {
 	free_stack(stack_a);
 	if (argc_2)
