@@ -22,6 +22,7 @@
 typedef struct s_snode
 {
 	int				data;
+	int				index;
 	struct s_snode	*next;
 	struct s_snode	*prev;
 }	t_snode;
