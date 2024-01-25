@@ -35,7 +35,6 @@ typedef struct s_snode
 t_snode	*find_last(t_snode *head);
 t_snode	*find_min_node(t_snode *head);
 t_snode	*find_max_node(t_snode *head);
-t_snode	*get_cheapest(t_snode *stack);
 int		stack_length(t_snode *head);
 int		sorted_stack(t_snode *head);
 void	init_stack(t_snode **stack_a, char **av, bool argc_2);

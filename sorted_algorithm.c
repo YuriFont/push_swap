@@ -12,6 +12,19 @@
 
 #include "push_swap.h"
 
+t_snode	*get_cheapest(t_snode *head)
+{
+	if (!head)
+		return (NULL);
+	while (head)
+	{
+		if (head->cheapest)
+			return (head);
+		head = head->next;
+	}
+	return (NULL);
+}
+
 static void	move_a_to_b(t_snode **stack_a, t_snode **stack_b)
 {
 	t_snode	*cheapest_node;
