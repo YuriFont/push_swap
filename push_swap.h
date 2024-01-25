@@ -69,6 +69,9 @@ void	free_stack(t_snode **head);
 void	free_matrix(char **av);
 void	error_free(t_snode **head, char **av, bool argc_2);
 
+/* Utils to sort */
+void	current_index(t_snode *head);
+
 /* Sorting Algorithms */
 void	sorted_three(t_snode **stack_a);
 void	sorted_algorithm(t_snode **stack_a, t_snode **stack_b);

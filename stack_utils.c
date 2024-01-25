@@ -77,7 +77,7 @@ t_snode	*find_max_node(t_snode *head)
 	if (!head)
 		return (NULL);
 	max = LONG_MIN;
-	while (head->next)
+	while (head)
 	{
 		if (head->data > max)
 		{
