@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/07 14:29:52 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/25 15:24:31 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:04:55 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	if (ac == 1 || (ac == 2 && !av[1][0]))
-		return (1);
+		return (0);
 	else if (ac == 2)
 		av = ft_split(av[1], ' ');
 	else

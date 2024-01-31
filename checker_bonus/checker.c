@@ -6,56 +6,43 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 18:39:03 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/31 18:45:10 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:04:15 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap/push_swap.h"
 #include "get_next_line.h"
 
-int	ft_strcmp(char *str1, char *str2)
+void	final_free(t_snode **stack_a, char **av, bool argc_2)
 {
-	int	i;
-
-	i = 0;
-	while (str1[i] && str2[i])
-	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
-	}
-	return (0);
+	free_stack(stack_a);
+	if (argc_2)
+		free_matrix(av);
 }
 
-void	make_command(t_snode **a, t_snode **b, char *command)
+int	main(int ac, char **av)
 {
-	if (!ft_strcmp(command, "sa\n"))
-		sa(a);
-	else if (!ft_strcmp(command, "sb\n"))
-		sb(b);
-	else if (!ft_strcmp(command, "ss\n"))
-		ss(a, b);
-	else if (!ft_strcmp(command, "pa\n"))
-		pa(a, b);
-	else if (!ft_strcmp(command, "pb\n"))
-		pb(b, a);
-	else if (!ft_strcmp(command, "ra\n"))
-		ra(a);
-	else if (!ft_strcmp(command, "rb\n"))
-		rb(b);
-	else if (!ft_strcmp(command, "rr\n"))
-		rr(a, b);
-	else if (!ft_strcmp(command, "rra\n"))
-		rra(a);
-	else if (!ft_strcmp(command, "rrb\n"))
-		rrb(b);
-	else if (!ft_strcmp(command, "rrr\n"))
-		rrr(a, b);
+	t_snode	*a;
+	t_snode	*b;
+
+	a = NULL;
+	b = NULL;
+	if (ac == 1 || (ac == 2 && !av[1][0]))
+		return (0);
+	else if (ac == 2)
+		av = ft_split(av[1], ' ');
 	else
-		exit(1);
-}
-
-int	main(void)
-{
-
+		av++;
+	init_stack(&a, av, ac == 2);
+	if (!sorted_stack(a))
+	{
+		if (stack_length(a) == 2)
+			sa(&a);
+		else if (stack_length(a) == 3)
+			sorted_three(&a);
+		else
+			sorted_algorithm(&a, &b);
+	}
+	final_free(&a, av, ac == 2);
+	return (0);
 }
