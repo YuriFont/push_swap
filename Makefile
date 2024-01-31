@@ -6,7 +6,7 @@
 #    By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:31:42 by yufonten          #+#    #+#              #
-#    Updated: 2024/01/31 19:23:27 by yufonten         ###   ########.fr        #
+#    Updated: 2024/01/31 19:35:35 by yufonten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,20 @@ SRC_FILES = push_swap.c\
 			sorted_algorithm.c\
 			init_nodes_a.c\
 			init_nodes_b.c\
+
+SRC_FILES_BONUS = checker_bonus.c\
+				  check_args.c\
+				  error_situation.c\
+				  init_stack.c\
+				  push.c\
+				  swap.c\
+				  rotate.c\
+				  reverse_rotate.c\
+				  stack_utils.c\
+				  sorted_three.c\
+				  sorted_algorithm.c\
+				  init_nodes_a.c\
+				  init_nodes_b.c\
 			
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -40,7 +54,7 @@ $(NAME):
 
 bonus: 
 		@$(MAKE) -C libft
-		@$(CC) $(CFLAGS) $(SRC_FILES) libft/$(LIBFT) -o $(BONUS)
+		@$(CC) $(CFLAGS) $(SRC_FILES_BONUS) libft/$(LIBFT) -o $(BONUS)
 		@echo  Correctly generated checker
 
 clean:
