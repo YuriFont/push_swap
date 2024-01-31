@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 18:39:03 by yufonten          #+#    #+#             */
-/*   Updated: 2024/01/31 19:12:52 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:29:30 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap/push_swap.h"
-#include "get_next_line.h"
+#include "push_swap.h"
 
 void	final_free(t_snode **stack_a, char **av, bool argc_2)
 {
@@ -44,11 +43,12 @@ int	main(int ac, char **av)
 	else
 		av++;
 	init_stack(&a, av, ac == 2);
+	write(1, "Ola\n", 4);
 	if (!sorted_stack(a))
 	{
 		choosing_algorithm(&a, &b);
 	}
-	if (sorted_stack(a) && b == NULL)
+	if (sorted_stack(a))
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);

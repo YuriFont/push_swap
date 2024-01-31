@@ -6,12 +6,13 @@
 #    By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:31:42 by yufonten          #+#    #+#              #
-#    Updated: 2024/01/30 15:15:12 by yufonten         ###   ########.fr        #
+#    Updated: 2024/01/31 19:23:27 by yufonten         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 LIBFT = libft.a
+BONUS = checker
 SRC_FILES = push_swap.c\
 			check_args.c\
 			error_situation.c\
@@ -37,12 +38,17 @@ $(NAME):
 		@$(CC) $(CFLAGS) $(SRC_FILES) libft/$(LIBFT) -o $(NAME)
 		@echo  Correctly generated push_swap
 
+bonus: 
+		@$(MAKE) -C libft
+		@$(CC) $(CFLAGS) $(SRC_FILES) libft/$(LIBFT) -o $(BONUS)
+		@echo  Correctly generated checker
+
 clean:
 		@$(MAKE) clean -C ./libft/
 
 fclean: clean
 		@$(MAKE) fclean -C ./libft/
-		@$(RM) $(LIBFT) $(NAME)
+		@$(RM) $(LIBFT) $(NAME) $(BONUS)
 
 re: fclean all
 
