@@ -6,7 +6,7 @@
 /*   By: yufonten <yufonten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 21:41:31 by yufonten          #+#    #+#             */
-/*   Updated: 2023/11/16 13:59:45 by yufonten         ###   ########.fr       */
+/*   Updated: 2024/01/31 18:30:22 by yufonten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 4
 # endif
 
 # include <unistd.h>
